@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main () {
+   int i, n;
+   float x,y;
+   float l=0.5;
+   time_t t;
+   
+   n = 10000;
+   srand((unsigned) time(&t));
+   FILE *fp;
+   fp  = fopen ("data.txt", "w");
+   for( i = 0 ; i < n ; i++ ) {
+       x=(float)rand()/(float)RAND_MAX;
+       y=-((float)log(1-x))/((float)l);
+     fprintf(fp, "%f\n", y);
+      printf("%f\n",y);
+   }
+   fclose (fp);
+
+   return(0);
+}
