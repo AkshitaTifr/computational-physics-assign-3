@@ -11,7 +11,7 @@ int main () {
    n = 10000;
    srand((unsigned) time(&t));
    FILE *fp;
-   fp  = fopen ("data.txt", "w");
+   fp  = fopen ("exp pdf data.txt", "w");
    for( i = 0 ; i < n ; i++ ) {
        x=(float)rand()/(float)RAND_MAX;
        y=-((float)log(1-x))/((float)l);
